@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Beirne — Resume</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    @media print {
+      #theme-toggle, .back, footer { display: none; }
+      body { font-size: 12px; padding: 0; }
+      main { padding: 0.5rem 1rem; max-width: 100%; }
+      a { color: inherit !important; border-bottom: none !important; }
+    }
+
+    main { padding: 3rem 0 2rem; }
+
+    /* header */
+    .r-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.2rem;
+    }
+    .r-contact {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 0.6rem;
+      margin-bottom: 0.15rem;
+    }
+    .r-contact span { opacity: 0.4; }
+    .r-contact a { color: var(--muted); border-bottom: none; }
+    .r-contact a:hover { color: var(--accent); }
+
+    /* section */
+    .r-section { margin-top: 1.1rem; }
+    .r-section h2 {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.4rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .r-section h2::before { content: none; }
+
+    /* entry rows */
+    .r-entry { margin-bottom: 0.65rem; }
+    .r-entry-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.1rem 0.5rem;
+    }
+    .r-org { font-weight: 700; }
+    .r-role { color: var(--muted); font-style: italic; font-size: 0.85rem; }
+    .r-date { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
+    .r-loc  { color: var(--muted); font-size: 0.8rem; }
+
+    ul.r-bullets {
+      margin: 0.2rem 0 0 1.1rem;
+      padding: 0;
+      font-size: 0.85rem;
+    }
+    ul.r-bullets li { margin-bottom: 0.15rem; }
+
+    /* education sub-lines */
+    .r-sub { font-size: 0.83rem; margin: 0.1rem 0 0; }
+    .r-sub .muted { color: var(--muted); }
+
+    /* skills inline */
+    .r-skills { font-size: 0.85rem; }
+    .r-skills-row { margin-bottom: 0.15rem; }
+    .r-skills-label { font-weight: 700; }
+
+    /* interests */
+    .r-interests { font-size: 0.83rem; color: var(--muted); margin-top: 0.3rem; }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">[ theme ]</button>
+
+  <main>
+    <a href="./index.html" class="back">&larr; back</a>
+
+    <!-- Header -->
+    <h1 class="r-name">Michael Beirne</h1>
+    <div class="r-contact">
+      <a href="mailto:msb2259@columbia.edu">msb2259@columbia.edu</a>
+      <span>//</span>
+      (631) 383-1983
+      <span>//</span>
+      <a href="https://github.com/michaelbeirnee">github.com/michaelbeirnee</a>
+    </div>
+
+    <!-- Education -->
+    <div class="r-section">
+      <h2>Education</h2>
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Columbia University, Columbia College</span>
+          <span class="r-loc">New York, NY</span>
+          <span class="r-date">May 2028</span>
+        </div>
+        <p class="r-sub"><span class="muted">Majors:</span> Computer Science &amp; Mathematics &mdash; GPA: 3.50; SAT 1530 (Math 790)</p>
+        <p class="r-sub"><span class="muted">Extracurriculars:</span> National Society of Black Engineers, BlackGen Capital, BLK Capital Management, Columbia EESA</p>
+        <p class="r-sub"><span class="muted">Honors &amp; Awards:</span> Dean&rsquo;s List, American Association of Blacks in Energy Scholarship, Ron Brown Scholar Program &ndash; Navigator Scholarship, Columbia Named Scholar</p>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="r-section">
+      <h2>Skills</h2>
+      <div class="r-skills">
+        <div class="r-skills-row"><span class="r-skills-label">Languages:</span> Java, C, Python, JavaScript, CSS, HTML, JSON, SQL, TypeScript, C++</div>
+        <div class="r-skills-row"><span class="r-skills-label">Technologies:</span> Git, Linux, Docker, Kubernetes, React, Bash, AWS (EC2), PostgreSQL, Figma</div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="r-section">
+      <h2>Experience</h2>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">NASA</span>
+          <span class="r-role">Data Science Research Fellow</span>
+          <span class="r-loc">New York, NY</span>
+          <span class="r-date">September &ndash; December 2026</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Incoming Fall 2026 Researcher for the L&rsquo;SPACE Academy at NASA</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">The Riverside Company</span>
+          <span class="r-role">Private Equity Intern</span>
+          <span class="r-loc">New York, NY</span>
+          <span class="r-date">Jun 2026 &ndash; Present</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Currently working on evaluating new deals and investment opportunities; sector/equity research analysis, LBO analyses</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">BeReal</span>
+          <span class="r-role">Spring Product Extern</span>
+          <span class="r-loc">New York, NY</span>
+          <span class="r-date">May &ndash; Jun 2026</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Analyzed user journeys and engagement flows to identify UX friction points for users</li>
+          <li>Designed and prototyped user retention feature to improve MAU through iterative refinements and testing</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Capital One</span>
+          <span class="r-role">Product Management Intern</span>
+          <span class="r-loc">McLean, VA</span>
+          <span class="r-date">Jun &ndash; Aug 2025</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Developed recommendation logic leveraging behavioral embeddings, ranking heuristics, and user interaction analytics</li>
+          <li>Implemented and analyzed website event/tag firing and user page interaction to understand engagement behavior</li>
+          <li>Collaborated with backend engineers to prototype and iterate data-driven product features for user interaction</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Capital One</span>
+          <span class="r-role">Business Analyst Intern</span>
+          <span class="r-loc">McLean, VA</span>
+          <span class="r-date">Jun &ndash; Aug 2024</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Forecasted macroeconomic trends within the commercial real estate sector using proprietary credit card data from Capital One&rsquo;s credit business across 100+ million transactions</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Jane Street</span>
+          <span class="r-role">Fellow</span>
+          <span class="r-loc">New York, NY</span>
+          <span class="r-date">Jun &ndash; Aug 2023</span>
+        </div>
+        <ul class="r-bullets">
+          <li>STEM program focusing on the intersection of computer science and mathematics with financial markets</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="r-section">
+      <h2>Projects</h2>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org"><a href="https://github.com/michaelbeirnee/minifinancialterminal">Research Terminal Platform</a></span>
+        </div>
+        <ul class="r-bullets">
+          <li>Quantitative research platform serving JWT-authenticated requests for market data, OLS factor-exposure models backed by TTL in-memory + on-disk caching layer</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org"><a href="https://github.com/michaelbeirnee/nandtet">NAND to Tetris Computer System</a></span>
+        </div>
+        <ul class="r-bullets">
+          <li>Built a complete 16-bit computer system from NAND gates through a working software stack, including HDL logic chips, CPU, memory, assembler, VM translator, Jack compiler, OS library, and emulators</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org"><a href="https://github.com/michaelbeirnee/findjobs">FindJobs &ndash; Internship Aggregation Website</a></span>
+        </div>
+        <ul class="r-bullets">
+          <li>Built full-stack internship aggregation platform using JavaScript, HTML/CSS, and GitHub Pages</li>
+          <li>Used Git/GitHub workflows for version control, deployment, debugging merge conflicts, and CI deployment</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Research -->
+    <div class="r-section">
+      <h2>Research</h2>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Project Hedgehog &ndash; Evals</span>
+          <span class="r-role">AI Research Fellow</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Working on evaluating AI model outputs across multiple tasks to improve instruction, formatting, and response quality</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Google &ndash; Developer Program</span>
+          <span class="r-role">Fellow</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Codelabs in Google Cloud, Firebase, APIs, and machine learning; built projects using Google developer tools</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Clubs -->
+    <div class="r-section">
+      <h2>Clubs</h2>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Columbia Chapter of ColorStack</span>
+          <span class="r-role">Member</span>
+          <span class="r-loc">New York, NY</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Community supporting students pursuing careers in computer science through mentorship initiatives</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-head">
+          <span class="r-org">Columbia Undergraduate Mathematical Modeling Society</span>
+          <span class="r-role">Member</span>
+          <span class="r-loc">New York, NY</span>
+        </div>
+        <ul class="r-bullets">
+          <li>Conducted mathematical modeling, estimations, and lectures surrounding how modeling is applied in the sciences</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="r-interests">
+      <strong>Interests:</strong> Tennis, Chess, Reading, Cooking, Trying New Cuisines, Volunteering, Citi Biking through NYC
+    </div>
+  </main>
+
+  <footer>
+    <p class="muted small">&copy; <span id="year"></span> Michael Beirne</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Beirne — CV</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    @media print {
+      #theme-toggle, .back, footer { display: none; }
+      body { font-size: 13px; }
+      main { padding: 1rem 0; }
+    }
+    .resume-header { margin-bottom: 0.5rem; }
+    .resume-header h1 { margin-bottom: 0.2rem; }
+    .resume-contact {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .resume-contact a { color: var(--muted); border-bottom: none; }
+    .resume-contact a:hover { color: var(--accent); }
+    .resume-section { margin-top: 1.75rem; }
+    .resume-section h2 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+    }
+    .resume-entry { margin-bottom: 1.4rem; }
+    .resume-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    .resume-entry-title { font-weight: 700; }
+    .resume-entry-meta { color: var(--muted); font-size: 0.82rem; }
+    .resume-entry p {
+      margin: 0.3rem 0 0;
+      font-size: 0.9rem;
+    }
+    .resume-entry ul {
+      margin: 0.4rem 0 0 1.1rem;
+      padding: 0;
+      font-size: 0.88rem;
+    }
+    .resume-entry ul li { margin-bottom: 0.25rem; }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: 0.4rem 1rem;
+      font-size: 0.88rem;
+    }
+    .skills-label { color: var(--muted); }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      padding: 0 0.35rem;
+      margin-right: 0.25rem;
+      line-height: 1.5;
+    }
+    .coursework {
+      font-size: 0.88rem;
+      columns: 2;
+      column-gap: 2rem;
+    }
+    .coursework li { margin-bottom: 0.2rem; break-inside: avoid; }
+  </style>
+</head>
+<body>
+  <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">[ theme ]</button>
+
+  <main>
+    <a href="./index.html" class="back">&larr; back</a>
+
+    <div class="resume-header">
+      <h1>Michael Beirne</h1>
+      <div class="resume-contact">
+        <a href="mailto:msb2259@columbia.edu">msb2259@columbia.edu</a>
+        <a href="mailto:mikebeirne04@gmail.com">mikebeirne04@gmail.com</a>
+        <a href="https://github.com/michaelbeirnee">github.com/michaelbeirnee</a>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>education</h2>
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <span class="resume-entry-title">Columbia University</span>
+          <span class="resume-entry-meta">New York, NY &mdash; Expected [Year]</span>
+        </div>
+        <p>B.S. Computer Science &amp; Mathematics</p>
+        <p class="muted" style="font-size:0.82rem; margin-top:0.15rem;">GPA: [X.XX]</p>
+        <p style="margin-top:0.5rem; font-size:0.85rem; color:var(--muted);">Relevant coursework:</p>
+        <ul class="coursework" style="margin-top:0.2rem; list-style:none; padding:0;">
+          <li>[Data Structures]</li>
+          <li>[Algorithms]</li>
+          <li>[Discrete Mathematics]</li>
+          <li>[Linear Algebra]</li>
+          <li>[Probability &amp; Statistics]</li>
+          <li>[Systems Programming]</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>projects</h2>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <span class="resume-entry-title"><a href="https://github.com/michaelbeirnee/minifinancialterminal">minifinancialterminal</a></span>
+          <span class="resume-entry-meta">Python &middot; FastAPI &middot; pandas &middot; NumPy &middot; SciPy &middot; statsmodels &middot; Chart.js &middot; SQLite</span>
+        </div>
+        <p>Bloomberg-style quantitative research platform built on open-source tooling.</p>
+        <ul>
+          <li>Retrieves historical OHLCV data from Yahoo Finance with multi-layer caching (in-memory + disk, TTL-configurable) to minimize redundant API calls</li>
+          <li>Constructs style factors (market, momentum, low-volatility); runs OLS regressions per asset, surfacing alpha, beta coefficients, t-statistics, and R&sup2;</li>
+          <li>Implements two complementary backtesting engines: a vectorized engine for fast bulk runs and an event-driven engine with explicit cash positions, commission, slippage, and execution latency modeling</li>
+          <li>Computes tearsheet metrics (CAGR, Sharpe, Sortino, max drawdown) and exports self-contained HTML reports with Chart.js equity curves</li>
+          <li>REST API secured with JWT authentication (python-jose + bcrypt); full pytest suite using FastAPI&rsquo;s TestClient</li>
+          <li>Ships with built-in strategies (buy-and-hold, SMA crossover, momentum, mean-reversion) and an extensible base class for custom implementations</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <span class="resume-entry-title"><a href="https://github.com/michaelbeirnee/nandtet">nandtet</a></span>
+          <span class="resume-entry-meta">Python &middot; HDL &middot; Hack Assembly &middot; Jack</span>
+        </div>
+        <p>Complete nand2tetris implementation: a 16-bit general-purpose computer built from first principles, gate-to-game.</p>
+        <ul>
+          <li>Designed all combinational and sequential logic in HDL: half/full adders, ALU, program counter, registers, and RAM hierarchy</li>
+          <li>Wrote an assembler in Python translating Hack assembly to binary, handling symbols, labels, and predefined registers</li>
+          <li>Implemented a two-pass VM translator (stack arithmetic, branching, function calls, closures) targeting the Hack architecture</li>
+          <li>Built a Jack compiler (tokenizer &rarr; parse tree &rarr; VM code) supporting classes, methods, constructors, arrays, and recursive calls</li>
+          <li>Authored an OS standard library (Math, Memory, Screen, Output, Keyboard, Array, String, Sys) in Jack</li>
+          <li>Tetris game runs on the VM emulator; compiled binary exceeds the 32 768-instruction ROM limit, requiring VM-level execution</li>
+        </ul>
+      </div>
+
+      <div class="resume-entry">
+        <div class="resume-entry-header">
+          <span class="resume-entry-title"><a href="https://github.com/michaelbeirnee/findjobs">findjobs</a></span>
+          <span class="resume-entry-meta">Python &middot; JavaScript &middot; HTML/CSS &middot; JSON</span>
+        </div>
+        <p>Full-stack job aggregation and tracking platform for finance and tech recruiting.</p>
+        <ul>
+          <li>Python scraping scripts populate firm databases across six verticals: investment banking, private equity, venture capital, software engineering, hedge funds, and recent postings</li>
+          <li>JSON-backed data layer tracks per-firm application status, enabling candidates to monitor the full recruiting funnel in one view</li>
+          <li>Vanilla JS frontend with sector-specific pages and live filtering; 122 commits across the full stack</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h2>skills</h2>
+      <div class="skills-grid">
+        <span class="skills-label">languages</span>
+        <span>Python, Java, JavaScript, HTML/CSS, Hack Assembly, Jack (HDL)</span>
+        <span class="skills-label">data &amp; quant</span>
+        <span>pandas, NumPy, SciPy, statsmodels, factor modeling, backtesting, OLS regression</span>
+        <span class="skills-label">web &amp; backend</span>
+        <span>FastAPI, Uvicorn, Pydantic, SQLAlchemy, SQLite, JWT, bcrypt, Chart.js</span>
+        <span class="skills-label">systems</span>
+        <span>Docker, Docker Compose, Git, pytest, Makefile</span>
+        <span class="skills-label">cs fundamentals</span>
+        <span>compilers, virtual machines, computer architecture, assemblers, OS design</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="muted small">&copy; <span id="year"></span> Michael Beirne</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
