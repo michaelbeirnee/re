@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Beirne</title>
+  <meta name="description" content="Personal website of Michael Beirne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%9C%B3</text></svg>" />
+</head>
+<body>
+  <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">[ theme ]</button>
+
+  <main>
+    <header class="intro">
+      <h1>Michael Beirne</h1>
+      <p class="tagline">Computer Science &amp; Mathematics &middot; <span class="muted">Columbia University</span></p>
+    </header>
+
+    <nav class="toc">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#resume">resume</a>
+      <a href="#contact">contact</a>
+    </nav>
+
+    <section id="about">
+      <h2>about</h2>
+      <p>
+        Hi, I'm Michael. I'm a student at Columbia University studying
+        Computer Science and Mathematics.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>projects</h2>
+      <ul class="entries">
+        <li>
+          <a href="#" class="entry-title">project-one</a>
+          <span class="muted"> &mdash; a one-line description of what it does.</span>
+        </li>
+        <li>
+          <a href="#" class="entry-title">project-two</a>
+          <span class="muted"> &mdash; another thing you built and are proud of.</span>
+        </li>
+        <li>
+          <a href="#" class="entry-title">project-three</a>
+          <span class="muted"> &mdash; a tool, library, or experiment.</span>
+        </li>
+      </ul>
+      <p class="muted small">
+        More on <a href="https://github.com/michaelbeirnee">GitHub</a>.
+      </p>
+    </section>
+
+    <section id="resume">
+      <h2>resume</h2>
+      <ul class="links">
+        <li><a href="./resume.pdf">resume.pdf</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>contact</h2>
+      <ul class="links">
+        <li><span class="muted">email</span> &nbsp; <a href="mailto:msb2259@columbia.edu">msb2259@columbia.edu</a></li>
+        <li><span class="muted">email</span> &nbsp; <a href="mailto:mikebeirne04@gmail.com">mikebeirne04@gmail.com</a></li>
+        <li><span class="muted">github</span> &nbsp; <a href="https://github.com/michaelbeirnee">@michaelbeirnee</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p class="muted small">&copy; <span id="year"></span> Michael Beirne &middot; built with plain HTML &amp; CSS</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
