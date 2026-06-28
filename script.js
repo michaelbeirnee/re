@@ -25,3 +25,22 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
+
+// Project hover previews — follow cursor
+(function () {
+  document.querySelectorAll(".proj-item").forEach(function (item) {
+    var preview = item.querySelector(".proj-preview");
+    if (!preview) return;
+
+    item.addEventListener("mouseenter", function () {
+      preview.classList.add("visible");
+    });
+    item.addEventListener("mouseleave", function () {
+      preview.classList.remove("visible");
+    });
+    item.addEventListener("mousemove", function (e) {
+      preview.style.left = e.clientX + "px";
+      preview.style.top  = e.clientY + "px";
+    });
+  });
+})();

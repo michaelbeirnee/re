@@ -35,21 +35,103 @@
 
     <section id="projects">
       <h2>projects</h2>
-      <ul class="entries">
-        <li>
-          <a href="https://github.com/michaelbeirnee/minifinancialterminal" class="entry-title">minifinancialterminal</a>
-          <span class="muted"> &mdash; Bloomberg-style quant research platform with factor modeling, dual backtesting engines (vectorized + event-driven), and HTML tearsheet reports. Built with FastAPI, pandas/NumPy/SciPy, and Chart.js.</span>
+      <ul class="proj-list">
+
+        <li class="proj-item">
+          <div class="proj-info">
+            <a href="https://github.com/michaelbeirnee/minifinancialterminal" class="proj-name">minifinancialterminal</a>
+            <span class="proj-type muted">quant research platform</span>
+          </div>
+          <span class="proj-stack muted">Python &middot; FastAPI &middot; pandas &middot; Chart.js</span>
+          <div class="proj-preview">
+            <div class="demo demo-terminal">
+              <div class="demo-topbar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="demo-title">market-data &mdash; factor-model</span>
+              </div>
+              <div class="demo-body">
+                <div class="demo-chart">
+                  <div class="chart-bars">
+                    <div class="bar dn" style="--h:45%"></div>
+                    <div class="bar up" style="--h:62%"></div>
+                    <div class="bar dn" style="--h:38%"></div>
+                    <div class="bar up" style="--h:71%"></div>
+                    <div class="bar up" style="--h:55%"></div>
+                    <div class="bar dn" style="--h:48%"></div>
+                    <div class="bar up" style="--h:80%"></div>
+                    <div class="bar dn" style="--h:60%"></div>
+                    <div class="bar up" style="--h:74%"></div>
+                    <div class="bar up" style="--h:88%"></div>
+                    <div class="bar dn" style="--h:66%"></div>
+                    <div class="bar up" style="--h:92%"></div>
+                  </div>
+                </div>
+                <div class="demo-metrics">
+                  <div class="metric"><span class="mk">CAGR</span><span class="mv gn">+18.4%</span></div>
+                  <div class="metric"><span class="mk">Sharpe</span><span class="mv gn">1.87</span></div>
+                  <div class="metric"><span class="mk">Sortino</span><span class="mv gn">2.41</span></div>
+                  <div class="metric"><span class="mk">Max DD</span><span class="mv rd">-12.3%</span></div>
+                  <div class="metric"><span class="mk">Alpha</span><span class="mv gn">0.023</span></div>
+                  <div class="metric"><span class="mk">Beta</span><span class="mv">0.84</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
-        <li>
-          <a href="https://github.com/michaelbeirnee/nandtet" class="entry-title">nandtet</a>
-          <span class="muted"> &mdash; Full nand2tetris implementation: NAND gates &rarr; 16-bit CPU &rarr; Jack compiler &rarr; playable Tetris. Includes assembler, VM translator, and OS library written from scratch in Python.</span>
+
+        <li class="proj-item">
+          <div class="proj-info">
+            <a href="https://github.com/michaelbeirnee/nandtet" class="proj-name">nandtet</a>
+            <span class="proj-type muted">16-bit computer from scratch</span>
+          </div>
+          <span class="proj-stack muted">Python &middot; HDL &middot; Assembly &middot; Jack</span>
+          <div class="proj-preview">
+            <div class="demo demo-stack">
+              <div class="stack-label">nand2tetris &mdash; full software stack</div>
+              <div class="stack-layers">
+                <div class="layer la"><span>Tetris (Jack)</span><span class="lr">application</span></div>
+                <div class="layer lb"><span>OS Library</span><span class="lr">os</span></div>
+                <div class="layer lc"><span>Jack Compiler</span><span class="lr">compiler</span></div>
+                <div class="layer ld"><span>VM Translator</span><span class="lr">vm</span></div>
+                <div class="layer le"><span>Assembler</span><span class="lr">assembler</span></div>
+                <div class="layer lf"><span>CPU / ALU / Gates (HDL)</span><span class="lr">hardware</span></div>
+              </div>
+            </div>
+          </div>
         </li>
-        <li>
-          <a href="https://github.com/michaelbeirnee/findjobs" class="entry-title">findjobs</a>
-          <span class="muted"> &mdash; Job aggregation platform covering IB, PE, VC, SWE, and hedge funds. Python scraping backend with a vanilla JS frontend for tracking application status across firms.</span>
+
+        <li class="proj-item">
+          <div class="proj-info">
+            <a href="https://github.com/michaelbeirnee/findjobs" class="proj-name">findjobs</a>
+            <span class="proj-type muted">internship aggregation platform</span>
+          </div>
+          <span class="proj-stack muted">Python &middot; JavaScript &middot; HTML/CSS</span>
+          <div class="proj-preview">
+            <div class="demo demo-jobs">
+              <div class="jobs-header">
+                <span class="jobs-title">findjobs</span>
+                <div class="jobs-tabs">
+                  <span class="jtab active">SWE</span>
+                  <span class="jtab">IB</span>
+                  <span class="jtab">PE</span>
+                  <span class="jtab">VC</span>
+                  <span class="jtab">HF</span>
+                </div>
+              </div>
+              <div class="jobs-list">
+                <div class="job-row"><span class="jco">Jane Street</span><span class="jrl">SWE Intern</span><span class="jst open">Open</span></div>
+                <div class="job-row"><span class="jco">Citadel</span><span class="jrl">SWE Intern</span><span class="jst applied">Applied</span></div>
+                <div class="job-row"><span class="jco">Two Sigma</span><span class="jrl">SWE Intern</span><span class="jst open">Open</span></div>
+                <div class="job-row"><span class="jco">DE Shaw</span><span class="jrl">SWE Intern</span><span class="jst closed">Closed</span></div>
+                <div class="job-row"><span class="jco">Stripe</span><span class="jrl">SWE Intern</span><span class="jst open">Open</span></div>
+                <div class="job-row"><span class="jco">Hudson River</span><span class="jrl">SWE Intern</span><span class="jst applied">Applied</span></div>
+              </div>
+            </div>
+          </div>
         </li>
+
       </ul>
-      <p class="muted small">
+      <p class="muted small" style="margin-top:1rem">
         More on <a href="https://github.com/michaelbeirnee">GitHub</a>.
       </p>
     </section>
